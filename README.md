@@ -1,20 +1,30 @@
-# My Portfolio
-This is my personal portfolio website showcasing my skills, projects, and contact information.
-It is built using HTML and CSS.
+# 🌐 Personal Portfolio - Minhaj
+
+This is my personal portfolio website showcasing my projects, skills, and experience.  
+Built with **HTML5**, **CSS3**, and a touch of creativity.
+
+## Live Demo
+🔗 [View Portfolio](https://portfolio-of-minhaj.vercel.app/)
+
+---
 
 ## Features
-Responsive design for mobile and desktop
+- Responsive design for mobile, tablet, and desktop
+- Clean and modern UI
+- Smooth hover effects
+- Dedicated sections for:
+  - Home
+  - About
+  - Skills
+  - Projects
+  - Contact
 
-Smooth animations & hover effects
-
-Sections for About Me, Projects, and Contact
+---
 
 ## Technologies Used
-HTML5
+- **HTML5**
+- **CSS3**
+- [Vercel](https://vercel.com/) for hosting
 
-CSS3
-
-
-
-
+---
 
