@@ -262,11 +262,6 @@
      background-repeat: no-repeat;
  }
 
- .contact1 {
-     position: relative;
-     top: 100px;
- }
-
  .contact-form {
      max-width: 600px;
      margin: auto;
@@ -331,4 +326,5 @@
      background: #0c0c0c;
      font-size: 1rem;
      color: #aaa;
+
  }
