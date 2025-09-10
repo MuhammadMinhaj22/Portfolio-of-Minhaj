@@ -92,61 +92,87 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQFx3TOgdzsgVX0RXSJ6ubGRKLOqXjnPKUPg&s" title="UXpilot" alt="UXpilot logo">
         </div>
 
-         <section id="projects" data-aos="fade-left">
-        <h2>Projects</h2>
+           <div class="wrap">
+        <h1 class="section-title">My Latest Work</h1>
         <div class="projects">
-            <div class="project-card">
-                <img src="Capture.PNG" style="width: 300px; height: 170px; border-radius: 5px;">
+
+            <a class="project-card" href="https://github.com/MuhammadMinhaj22/Travel-Agency" target="_blank">
+                <img src="Capture.PNG" alt="Explore World">
+                <div class="label">Web • HTML/CSS</div>
                 <div class="content">
                     <h3>Explore-World Travels</h3>
-                    <p>A fully responsive travel website that promotes destinations and allows users to explore travel
-                        packages. Designed using HTML and CSS.</p>
-                    <a href="https://github.com/MuhammadMinhaj22/Travel-Agency">View on GitHub</a>
+                    <p>Responsive travel website showcasing destinations and packages.</p>
+                    <div><span class="btn">View on GitHub</span></div>
                 </div>
-            </div>
-            <div class="project-card">
-                <img src="Capture2.PNG" style="width: 300px; height: 170px; border-radius: 5px;">
+            </a>
+
+
+
+            <a class="project-card" href="https://github.com/MuhammadMinhaj22/Car_racing_game" target="_blank">
+                <img src="Capture2.PNG" alt="Car Racing">
+                <div class="label">Python • Pygame</div>
                 <div class="content">
                     <h3>Car Racing Game</h3>
-                    <p>A 2D car racing game developed using Python and Pygame. The player dodges traffic and collects
-                        points
-                        while avoiding crashes. A great project to demonstrate knowledge of game loops, event handling,
-                        and
-                        animations in Python.</p>
-                    <a href="https://github.com/MuhammadMinhaj22/Car_racing_game">View on GitHub</a>
+                    <p>2D racing game with obstacles and score mechanics.</p>
+                    <div><span class="btn">View on GitHub</span></div>
                 </div>
-            </div>
-            <div class="project-card">
-                <img src="Capture4.PNG" style="width: 300px; height: 170px; border-radius: 5px;">
+            </a>
+            <!-- Jarvis -->
+            <a class="project-card" href="https://github.com/MuhammadMinhaj22/Jarvis_GUI-AI-Assistant" target="_blank">
+                <img src="Capture3.PNG" alt="Jarvis GUI">
+                <div class="label">Python • gTTS</div>
                 <div class="content">
-                    <h3>Jarvis 1.1 AI Assistant (Upgraded)</h3>
-                    <p>An enhanced Python-based AI assistant with voice commands, Wikipedia search, weather info, music,
-                        alarms, and more. Modular code design enables better performance and easy feature expansion</p>
-                    <a href="#">View on GitHub</a>
+                    <h3>Jarvis-1.1 AI Assistant</h3>
+                    <p>Voice-enabled assistant built with Tkinter, gTTS and more.</p>
+                    <div><span class="btn">View on GitHub</span></div>
                 </div>
-            </div>
-            <div class="project-card">
-                <img width="300" height="170" alt="image" src="Capture9.PNG" />
+            </a>
+
+
+            <a class="project-card" href="https://github.com/MuhammadMinhaj22/n8n-Airtable_Workflow" target="_blank">
+                <img alt="image" src="Capture9.PNG" />
+                <div class="label">n8n Workflow</div>
                 <div class="content">
                     <h3>AI Agent Workflow (n8n)</h3>
-                    <p>I built an AI-powered chat agent using n8n, OpenRouter Chat Model, and Simple Memory.
-                        The workflow receives messages, processes them with an LLM, and remembers past conversations for
-                        more natural, contextual replies.</p>
-                    <a href="https://github.com/MuhammadMinhaj22/n8n-Airtable_Workflow">View on GitHub</a>
+                    <p>I built an AI-powered chat agent using n8n, OpenRouter Chat Model, and Simple Memory.</p>
+                    <div><span class="btn">View on GitHub</span></div>
                 </div>
-            </div>
-            <div class="content">
-                <div class="project-card">
-                    <img width="300" height="170" alt="image" src="Capture10.PNG" />
-                    <div class="content">
-                        <h3>NASA Solar Flare Workflow(n8n)</h3>
-                        <p>This workflow uses **NASA DONKI API** to fetch solar flare data on schedule.
-                            It checks conditions and sends different requests based on the result.</p>
-                        <a href="https://github.com/MuhammadMinhaj22/n8n-NASA-solarflare">View on GitHub</a>
-                    </div>
+            </a>
+            <a class="project-card" href="https://github.com/MuhammadMinhaj22/n8n-NASA-solarflare" target="_blank">
+                <img alt="image" src="Capture10.PNG" />
+                <div class="label">n8n Workflow</div>
+                <div class="content">
+                    <h3>NASA Solar Flare Workflow(n8n)</h3>
+                    <p>This workflow uses **NASA DONKI API** to fetch solar flare data on schedule.</p>
+                    <div><span class="btn">View on GitHub</span></div>
                 </div>
+            </a>
 
-    </section>
+
+
+        </div>
+    </div>
+
+
+
+    <script>
+        // 3D tilt effect
+        const cards = document.querySelectorAll('.project-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const dx = (e.clientX - rect.left - rect.width / 2) / (rect.width / 2);
+                const dy = (e.clientY - rect.top - rect.height / 2) / (rect.height / 2);
+                card.style.transform = `perspective(900px) rotateX(${dy * 6}deg) rotateY(${dx * -6}deg) translateY(-6px)`;
+                card.querySelector('img').style.transform = `scale(1.08) translate(${dx * -6}px,${dy * -6}px)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = ''; card.querySelector('img').style.transform = '';
+            });
+        });
+    </script>
+             
+         
             
               
 
@@ -201,6 +227,7 @@
 
 
 </html>
+
 
 
 
