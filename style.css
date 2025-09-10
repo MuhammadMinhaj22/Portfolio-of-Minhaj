@@ -206,53 +206,86 @@
      }
  }
 
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
 
+.project-card {
+    position: relative;
+    flex: 1 1 300px;
+    max-width: 350px;
+    height: 220px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
 
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
 
- .projects {
-     display: flex;
-     flex-wrap: wrap;
-     gap: 2rem;
-     justify-content: center;
- }
+.project-card:hover img {
+    transform: scale(1.1); /* zoom image thoda hover pe */
+}
 
- .project-card {
-     flex: 1 1 300px;
-     max-width: 350px;
-     background: linear-gradient(to bottom right, #1e3a8a, #9333ea);
-     padding: 2rem;
-     border-radius: 15px;
-     color: white;
-     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-     transition: transform 0.3s ease, box-shadow 0.3s ease;
- }
+/* Hidden content */
+.project-card .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75); /* dark overlay */
+    color: #fff;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
 
- .project-card:hover {
-     transform: scale(1.05);
-     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
- }
+.project-card:hover .content {
+    opacity: 1;
+    transform: translateY(0);
+}
 
- .project-card h3 {
-     font-size: 1.5rem;
-     margin-bottom: 1rem;
- }
+.project-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
 
- .project-card a {
-     display: inline-block;
-     margin-top: 1rem;
-     padding: 0.6rem 1.2rem;
-     background: #00c9ff;
-     color: #000;
-     font-weight: bold;
-     text-decoration: none;
-     border-radius: 5px;
-     transition: background 0.3s;
- }
+.project-card p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
 
- .project-card a:hover {
-     background: #0077cc;
-     color: #fff;
- }
+.project-card a {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+}
+
+.project-card a:hover {
+    background: linear-gradient(90deg, #ee0979, #ff6a00);
+}
+
 
  #contact {
      background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
@@ -328,3 +361,4 @@
      color: #aaa;
 
  }
+
