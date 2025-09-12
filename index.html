@@ -19,8 +19,8 @@
 
 </head>
 
-
 <body>
+
 
     <header>
         <nav>
@@ -29,7 +29,9 @@
                 M.Minhaj
             </h1>
 
-            <ul>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+
+            <ul id="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -38,6 +40,15 @@
             </ul>
         </nav>
     </header>
+
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        toggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
 
     <section id="home" class="hero" data-aos="fade-down">
         <h2>Hello, I'm <span>Muhammad Minhaj</span></h2>
@@ -63,10 +74,10 @@
             </div>
         </div>
 
-   
+
 
     </section>
- 
+
 
     <section id="skills" data-aos="zoom-in">
         <h2>Skills</h2>
@@ -78,8 +89,8 @@
                 alt="Python">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" title="Pandas"
                 alt="Pandas">
-             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSORErObBxZDkalSzwN8UaUF68IUdptQoN6Hw&s" alt="Prompt Engineer"
-                title="Prompt & Context Engineer">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSORErObBxZDkalSzwN8UaUF68IUdptQoN6Hw&s"
+                alt="Prompt Engineer" title="Prompt & Context Engineer">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"
                 title="Jupyter Notebook" alt="Jupyter Notebook">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg" title="PyCharm"
@@ -90,50 +101,54 @@
                 title="MS Office" alt="MS Office">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" title="GitHub"
                 alt="GitHub">
-            <img src="https://lovable.dev/img/logo/lovable-icon-bg-light.png" title="Loveable"
-                alt="Loveable">
+            <img src="https://lovable.dev/img/logo/lovable-icon-bg-light.png" title="Loveable" alt="Loveable">
             <img src="https://cdn.simpleicons.org/n8n" alt="n8n" title="n8n" />
             <img src="https://cdn.simpleicons.org/airtable" alt="Airtable" title="Airtable" />
             <img src="https://cdn.simpleicons.org/canva" title="Canva" alt="Canva logo">
             <img src="https://cdn.simpleicons.org/supabase" title="Supabase" alt="Supabase logo">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQFx3TOgdzsgVX0RXSJ6ubGRKLOqXjnPKUPg&s" title="UXpilot" alt="UXpilot logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQFx3TOgdzsgVX0RXSJ6ubGRKLOqXjnPKUPg&s"
+                title="UXpilot" alt="UXpilot logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScLTSJg0NTaiveQlcCfdoHiig1HwAd8T61-Q&s"
+                title="Veo 3" alt="Veo 3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEF27FUXdytoHuqpdZsXan0vqhV6nJIRbGcQ&s"
+                title="Nano Banana" alt="Nano Banana">
         </div>
-</section>
+    </section>
 
-          <section id="projects" data-aos="zoom-in">
-           <div class="wrap">
-        <h2>My Latest Work</h2>
-        <div class="projects">
+    <section id="projects" data-aos="zoom-in">
+        <div class="wrap">
+            <h2>My Latest Work</h2>
+            <div class="projects">
 
-            <a class="project-card" href="https://github.com/MuhammadMinhaj22/Travel-Agency" target="_blank">
-                <img src="Capture.PNG" alt="Explore World">
-                <div class="label">Web • HTML/CSS</div>
-                <div class="content">
-                    <h3>Explore-World Travels</h3>
-                    <p>Responsive travel website showcasing destinations and packages.</p>
-                    <div><span class="btn">View on GitHub</span></div>
-                </div>
-            </a>
+                <a class="project-card" href="https://github.com/MuhammadMinhaj22/Travel-Agency" target="_blank">
+                    <img src="Capture.PNG" alt="Explore World">
+                    <div class="label">Web • HTML/CSS</div>
+                    <div class="content">
+                        <h3>Explore-World Travels</h3>
+                        <p>Responsive travel website showcasing destinations and packages.</p>
+                        <div><span class="btn">View on GitHub</span></div>
+                    </div>
+                </a>
 
 
 
-            <a class="project-card" href="https://chrono-boutique-studio.lovable.app" target="_blank">
-                <img src="Capture5.PNG" alt="Watches web">
-                <div class="label">Web • Loveable • Supabase</div>
-                <div class="content">
-                    <h3>Chronos Watches</h3>
-                    <p>An online boutique offering luxury Swiss watches with premium design and craftsmanship.</p>
-                    <div><span class="btn">View on Website</span></div>
-                </div>
-            </a>
+                <a class="project-card" href="https://chrono-boutique-studio.lovable.app" target="_blank">
+                    <img src="Capture5.PNG" alt="Watches web">
+                    <div class="label">Web • Loveable • Supabase</div>
+                    <div class="content">
+                        <h3>Chronos Watches</h3>
+                        <p>An online boutique offering luxury Swiss watches with premium design and craftsmanship.</p>
+                        <div><span class="btn">View on Website</span></div>
+                    </div>
+                </a>
 
+            </div>
         </div>
-    </div>
-     <div class="btn-container">
-  <a href="port_project.html" class="btn1">View all projects</a>
-</div>
+        <div class="btn-container">
+            <a href="port_project.html" class="btn1">View all projects</a>
+        </div>
 
-</section>
+    </section>
 
 
     <script>
@@ -152,10 +167,10 @@
             });
         });
     </script>
-             
-         
-            
-              
+
+
+
+
 
     <div class="overlay"></div>
     <section id="contact" data-aos="fade-up">
@@ -208,11 +223,6 @@
 
 
 </html>
-
-
-
-
-
 
 
 
