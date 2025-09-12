@@ -48,6 +48,7 @@
     }
 
     /* ---------------- HEADER ---------------- */
+
     header {
       background: #0c0c0c;
       padding: 1.5rem 2rem;
@@ -70,17 +71,9 @@
     nav h1 {
       font-size: 2rem;
       color: #00c9ff;
-      display: flex;
-      align-items: center;
-      gap: 10px;
     }
 
-    nav h1 img {
-      height: 40px;
-      width: 40px;
-      border-radius: 50%;
-    }
-
+    /* Default navbar */
     nav ul {
       display: flex;
       gap: 2rem;
@@ -109,6 +102,34 @@
 
     nav a:hover::after {
       width: 100%;
+    }
+
+    /* Hamburger button */
+    .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* Responsive for mobile */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
     }
 
     /* ---------------- PROJECTS ---------------- */
@@ -256,20 +277,31 @@
   <!-- ---------------- HEADER ---------------- -->
   <header>
     <nav>
-      <h1>
-        <img src="logo.png" alt="Logo" />
+      <h1 style="display: flex; align-items: center; gap: 10px;">
+        <img src="logo.png" alt="Logo" style="height: 40px; width: 40px; border-radius: 50%;" />
         M.Minhaj
       </h1>
 
-      <ul>
-        <li><a href="index.html#home">Home</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#skills">Skills</a></li>
-        <li><a href="index.html#projects">Projects</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+
+      <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
 
   <!-- ---------------- PROJECTS ---------------- -->
   <section id="projects" data-aos="zoom-in">
@@ -290,7 +322,7 @@
 
         <!-- Jarvis -->
         <a class="project-card" href="https://github.com/MuhammadMinhaj22/Jarvis_1.1-AI-Assistant" target="_blank">
-          <img src="Capture4.PNG" alt="Jarvis 1.1" />
+          <img src="Capture4.PNG" alt="Jarvis 1.1" style="width: 1000px; height: 400;"/>
           <div class="label">Python • gTTS</div>
           <div class="content">
             <h3>Jarvis-1.1 AI Assistant</h3>
