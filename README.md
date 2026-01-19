@@ -4,7 +4,7 @@ This is my personal portfolio website showcasing my projects, skills, and experi
 Built with **HTML5**, **CSS3**, and a touch of creativity.
 
 ## Live Demo
-🔗 [View Portfolio](https://portfolio-of-minhaj.vercel.app/)
+🔗 [View Portfolio](https://portfolioofminhaj.vercel.app/)
 
 ---
 
