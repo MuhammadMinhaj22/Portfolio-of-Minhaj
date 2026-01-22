@@ -9,7 +9,12 @@
     html,
     body {
         font-family: 'Poppins', sans-serif;
-        background: #0f172a;
+        /* background: #0f172a; */
+          background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
+            url('vid.gif');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         color: #f1f5f9;
         overflow-x: hidden;
         font-size: 18px;
@@ -389,13 +394,13 @@
 
     /* ---------------- CONTACT ---------------- */
 
-    #contact {
+    /* #contact {
         background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
             url('vid.gif');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-    }
+    } */
 
     .contact-form {
         max-width: 600px;
@@ -463,5 +468,6 @@
         font-size: 1rem;
         color: #aaa;
     }
+
 
 
