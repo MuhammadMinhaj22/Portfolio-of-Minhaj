@@ -9,15 +9,10 @@
     html,
     body {
         font-family: 'Poppins', sans-serif;
-        /* background: #0f172a; */
+        background: #0f172a;
         color: #f1f5f9;
         overflow-x: hidden;
         font-size: 18px;
-        background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
-            url('vid.gif');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
        
     }
 
@@ -468,4 +463,5 @@
         font-size: 1rem;
         color: #aaa;
     }
+
 
